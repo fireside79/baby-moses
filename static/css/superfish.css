@@ -1,0 +1,80 @@
+.sf-menu, .sf-menu * {margin:0;padding:0;list-style:none;}
+#main-menu{ width:950px; margin:0 auto; position:relative; z-index:99;background:url(../images/menu-line.jpg) 100% 0 no-repeat;}
+.sf-menu li {float:left; position:relative; font:bold 11px/13px "Trebuchet MS", Arial, Helvetica, sans-serif;text-transform:uppercase; background:url(../images/menu-line.jpg) 0 0 no-repeat; padding-left:1px;}
+.sf-menu li:first-child{ padding-left:0;}
+	.sf-menu li a {display:block;color:#564b49; padding:20px 0px 27px; text-align:center; width:119px;text-decoration:none;-webkit-transition:color 0.5s ease;-moz-transition:color 0.5s ease;-o-transition:color 0.5s ease;transition:color 0.5s ease; position:relative; position:relative;}
+	.sf-menu li a strong{ display:block; width:100%; height:100%; top:0; left:0; position:absolute;background:url(../images/menu-current.jpg) 50% 0 repeat-x; opacity:0;-webkit-transition:all 0.5s ease;-moz-transition:all 0.5s ease;-o-transition:all 0.5s ease;transition:all 0.5s ease; z-index:1;}
+	.sf-menu li a span{ position:relative; z-index:2;}
+		.sf-menu li.sfHover a,.sf-menu li.current a{color:#fff; background:url(../images/menu-current.jpg) 50% 0 repeat-x;}
+		.sf-menu li a:hover strong{ opacity:1;}
+		.sf-menu li a:hover{ color:#fff;}
+.sf-menu ul {
+	position:		absolute;
+	top:			-999em;
+	z-index:		99;
+	width:			160px; 
+	display:none;
+	background:#b00000;
+	padding:11px 0;
+}
+.sf-menu li li{width:100%; border-top:1px solid #970202; background:none; padding:0;}
+	.sf-menu li li:first-child{ border-top:none;}
+	.sf-menu li li a,.sf-menu li.sfHover li a,.sf-menu li.current li a{color:#fff; width:auto;background:#b00000; border:none; padding:13px 10px 11px 35px; text-align:left;-webkit-transition:none;-moz-transition:none;-o-transition:none;transition:none;}
+		.sf-menu li li a:hover,.sf-menu li li.sfHover a,.sf-menu li li.current a{background:url(../images/submenu.jpg) 0 0 repeat-x; border:3px solid #990202;padding:10px 7px 8px 32px;}
+.sf-menu ul ul {
+	position:		absolute;
+	top:			-999em;
+	z-index:		99;
+	width:			160px; 
+	display:none;
+	background:#b00000;
+}
+	.sf-menu li li li a,.sf-menu li li.sfHover li a,.sf-menu li li.current li a{background:#b00000; padding:13px 10px 11px 35px; border:none;}
+		.sf-menu li li li a:hover,.sf-menu li li li.current a{background:url(../images/submenu.jpg) 0 0 repeat-x; border:3px solid #990202;padding:10px 7px 8px 32px;}
+.sf-menu li:hover ul,
+.sf-menu li.sfHover ul {
+	left:			0px;
+	top:			61px; /* match top ul list item height */
+}
+ul.sf-menu li:hover li ul,
+ul.sf-menu li.sfHover li ul {
+	top:			-999em;
+}
+ul.sf-menu li li:hover ul,
+ul.sf-menu li li.sfHover ul {
+	left:			161px; /* match ul width */
+	top:			-11px;
+}
+ul.sf-menu li li:hover li ul,
+ul.sf-menu li li.sfHover li ul {
+	top:			-999em;
+}
+ul.sf-menu li li li:hover ul,
+ul.sf-menu li li li.sfHover ul {
+	left:			10em; /* match ul width */
+	top:			00px;
+}
+.sf-menu li a span.arrow{ display:block; background:url(../images/arrow-menu.png) 0 0 no-repeat; width:8px; height:5px; position:absolute; top:24px; right:20px;}
+.sf-menu li li a span.arrow{top:16px; right:33px;}
+.sf-menu li li a:hover span.arrow,.sf-menu li li.sfHover a span.arrow,.sf-menu li li.current a span.arrow{top:13px; right:30px;}
+@media only screen and (min-width: 768px) and (max-width: 985px) {
+#main-menu{ width:758px;}
+.sf-menu li a {padding:20px 20px 27px; width:auto;}
+.sf-menu li a span.arrow{top:24px;right:7px;}
+}
+@media only screen and (max-width: 767px) {
+#main-menu{ width:300px; background:none;}
+.bg-nav{ background: url(../images/lineH2.jpg) 0 0 repeat-x !important;}
+.sf-menu li{background:url(../images/nav.png) 0 0 repeat-x; box-shadow:1px 1px 3px rgba(0,0,0,.2);}
+.sf-menu li a{ display:block; width:300px; padding:20px 0px 27px;}
+.sf-menu ul{ min-width:100%; padding:0;}
+.responsive-menu li { float: none;}
+.responsive-menu { padding: 0; margin: 0; }
+.responsive-menu li:hover > ul { display: none; }
+.responsive-menu li ul { position: relative; left: 0 !important; top:0px !important; }
+.sf-menu li.li-form{padding:10px 35px 9px 35px;}
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+#main-menu{ width:420px;}	
+.sf-menu li a{ display:block; width:420px; padding:20px 0px 27px;}
+}

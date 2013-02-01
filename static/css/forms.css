@@ -1,0 +1,39 @@
+input[type="text"],input[type=password],textarea{font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;color:#fff;font-size:13px;vertical-align:middle;font-weight:normal;padding:10px 6px;margin:0;background:url(../images/input2.jpg) 0 0 repeat;outline:none;width:216px;border:1px solid #2b2623; box-shadow:inset 1px 1px 3px rgba(0,0,0,.3);}
+/* Search form */
+#search{ position:relative; margin:10px 0 10px 12px;}
+	#search input{font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;color:#000;font-size:13px;vertical-align:middle;font-weight:normal;padding:7px 34px 8px 6px;margin:0;background: url(../images/input.jpg) 0 0 repeat-x; border:none;border-bottom:1px solid #fbfaf8; border-right:1px solid #fbfaf8; box-shadow:inset 1px 1px 1px rgba(0,0,0,.1);outline:none;width:169px;}
+	#search a.search{ display:block; background:url(../images/search.jpg) center center no-repeat;width:34px; height:34px; position:absolute; top:0; right:0; padding:0;}
+/* Contact form */
+#contact-form{position:relative; padding:12px 0 0px 0;}
+	#contact-form fieldset{border:none;padding:0}
+	#contact-form label {display:block;min-height:52px;}
+		#contact-form input{ width:216px;padding:11px 6px;}
+		#contact-form textarea{height:101px;overflow:auto;width:296px; resize:none;}
+		#contact-form .message{min-height:125px;}
+.buttons{position:relative; overflow:hidden; padding:12px 0 3px 1px; text-align:left;}
+	.buttons span{position:relative; overflow:hidden; margin-right:15px;}
+.success, .error, .empty{display:none; text-align:left;}
+.error, .empty{position:relative; color:red; font-size:11px; top:0px; left:10px;}
+.success, .success strong{ color:#fff;}
+.text-form{color:#fff; display:inline-block; padding:10px 0 0 5px;}
+.form-button{ background:#292421; display:inline-block; color:#fff; text-decoration:none; padding:11px 18px; box-shadow:1px 1px 3px rgba(0,0,0,.5);-webkit-transition:all 0.5s ease;-moz-transition:all 0.5s ease;-o-transition:all 0.5s ease;transition:all 0.5s ease;}
+	.form-button:hover{ background:#df0000;}
+/* Subscribe form */
+#subscribe{ position:relative; margin:0px 0 0px 0px;}
+	#subscribe input{font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;color:#000;font-size:13px;vertical-align:middle;font-weight:normal;padding:7px 6px 8px;margin:0;background: url(../images/input.jpg) 0 0 repeat-x; border:none;border-bottom:1px solid #fbfaf8; border-right:1px solid #fbfaf8; box-shadow:inset 1px 1px 1px rgba(0,0,0,.1);outline:none;width:206px;}
+/*	#subscribe a.subscribe{ display:block; background:url(../images/search.jpg) center center no-repeat;width:34px; height:34px;  padding:0;}*/
+.subcribe-button{ background:#1b1816; display:block; color:#fff; text-decoration:none; padding:7px 18px; box-shadow:1px 1px 3px rgba(0,0,0,.5);-webkit-transition:all 0.5s ease;-moz-transition:all 0.5s ease;-o-transition:all 0.5s ease;transition:all 0.5s ease;position:absolute; top:0; right:0;}
+	.subcribe-button:hover{ background:#df0000;}
+@media only screen and (min-width: 768px) and (max-width: 985px) {
+	#contact-form input{ width:186px;}
+	#contact-form textarea{width:234px;}
+	#subscribe input {width:142px;}
+}
+
+@media only screen and (max-width: 767px) {
+	#subscribe input {width:196px;}
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	#subscribe input {width:316px;}
+}
