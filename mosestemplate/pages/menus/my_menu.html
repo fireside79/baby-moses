@@ -1,0 +1,20 @@
+{% load pages_tags %}
+
+<ul class="sf-menu responsive-menu">
+{% for page in page_branch %}
+{% if page.in_menu %}
+<li><a href="{{ page.get_absolute_url }}"><span>{{ page.title }}</span><strong></strong></a></li>
+    	{% page_menu page %}
+{% endif %}
+{% endfor %}
+<!--li class="li-form">
+		<form id="search">
+			 <input type="text">
+			 <a class="search" onClick="document.getElementById('search').submit()"></a>
+		</form>
+	</li-->
+</ul>
+
+
+
+
