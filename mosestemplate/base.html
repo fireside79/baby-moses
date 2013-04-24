@@ -97,9 +97,66 @@ $(function(){
 		{% endblock %}
 		
 	</div>
+
+	<!-- content -->
+	<div class="bg3">
+        <section id="content"> 
+            <div class="padcontent">
+                <div class="container_24">
+                	<div class="wrapper">
+                    	<div class="grid_8 suffix_1">
+                        	<figure class="img-style2 img-pos p1">
+                            	<a href="#">
+                                    <img src="{{ STATIC_URL }}images/5page-img2.jpg" alt="">
+                                    <div class="img-bottom">Sponsor a child</div>
+                                </a>
+                            </figure>
+                            <div class="banner1">
+                            	<img src="{{ STATIC_URL }}images/5page-img3.jpg" alt="">
+                                <div class="banner1-text">
+                                    <div class="padbot">
+                                        A little goes 
+                                        <span>a long way!</span>
+                                    </div>
+                                    <a class="banner-button" href="/ways-to-help/donate/">DONATE GOODS</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid_12">
+                        	{% block content %}{% endblock %}
 	
-	{% block content %}{% endblock %}
-	{% block main %}{% endblock %}
+							{% block main %}{% endblock %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+	</div>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	{% block sub_content %}
 	{% endblock %}

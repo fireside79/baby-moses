@@ -4,18 +4,12 @@
 
 {% block main %}{{ block.super }}
 
-<div class="bg3">
-	<section id="content"> 
-	<div class="padcontent">
-		<div class="container_24">
+
 			{% block title %}
 			{% editable page.title %}<h3>{{ page.title }}</h3>{% endeditable %}
 			{% endblock %}
 {% editable page.richtextpage.content %}
 {{ page.richtextpage.content|richtext_filter|safe }}
 {% endeditable %}
-		</div>
-	</div>
-	</section>
-</div>
+		
 {% endblock %}
