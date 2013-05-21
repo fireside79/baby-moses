@@ -77,42 +77,24 @@
 					<h3>Latest News</h3>
 					<p>Here you can find our latest news and highlights.</p>
 				</div>
+				
+				{% blog_recent_posts 3 as recent_posts %}
+				
+				{% for post in recent_posts %}
 				<div class="grid_6">
 					<div class="news">
-						<div class="fleft date"><span>16</span>feb</div>
+						<div class="fleft date"><span>{{post.publish_date|date:"j"}}</span>{{post.publish_date|date:"M"}}</div>
 						<div class="extra-wrap">
-							<a href="#" class="link1">child and working<br> age poverty set to rise in next three years</a>
+							<a href="{{post.get_absolute_url}}" class="link1">{{post.title}}</a>
 						</div>
 						<div class="extra-wrap2">
-							<p>Lorem ipsum dolor sit amet, consectetuer adpi scing elit, sed diam nonu mmy nibh euismod tinc idunt ut laoreet.</p>
-							<a href="#" class="button">Read More</a>
+							<p>{{ post.description_from_content|safe }}</p>
+							<a href="{{post.get_absolute_url}}" class="button">Read More</a>
 						</div>
 					</div>
 				</div>
-				<div class="grid_6">
-					<div class="news">
-						<div class="fleft date"><span>14</span>feb</div>
-						<div class="extra-wrap">
-							<a href="#" class="link1">Power to the young people. Jaguar prize draw winner announced</a>
-						</div>
-						<div class="extra-wrap2">
-							<p>Lorem ipsum dolor sit amet, consectetuer adpi scing elit, sed diam nonu mmy nibh euismod tinc idunt ut laoreet.</p>
-							<a href="#" class="button">Read More</a>
-						</div>
-					</div>
-				</div>
-				<div class="grid_6">
-					<div class="news">
-						<div class="fleft date"><span>12</span>feb</div>
-						<div class="extra-wrap">
-							<a href="#" class="link1">One man, one run,1000 miles. challenges the concept of limitations.</a>
-						</div>
-						<div class="extra-wrap2">
-							<p>Lorem ipsum dolor sit amet, consectetuer adpi scing elit, sed diam nonu mmy nibh euismod tinc idunt ut laoreet.</p>
-							<a href="#" class="button">Read More</a>
-						</div>
-					</div>
-				</div>
+				{% endfor %}
+
 			</div>
 			<div class="z2"><div class="grid_6 margtop2"><a href="#" class="button">View All News</a></div><div class="clear"></div></div>
 		</div>
