@@ -50,28 +50,17 @@
 # field instance. When specifying the field class, the path
 # ``django.models.db.`` can be omitted for regular Django model fields.
 #
-EXTRA_MODEL_FIELDS = (
-    (
-        # Dotted path to field.
-        "mezzanine.pages.models.RichTextPage.header_image",
-        # Dotted path to field class.
-        "ImageField",
-        # Positional args for field class.
-        ("Image",),
-         # Keyword args for field class.
-        {"blank": True, "upload_to": "richtextpage_images", "null": True},
-    ),
-    (
-        # Dotted path to field.
-        "mezzanine.pages.models.RichTextPage.headline",
-        # Dotted path to field class.
-        "CharField",
-        # Positional args for field class.
-        ("Headline",),
-        # Keyword args for field class.
-        {"blank": True},
-    )
-)
+# EXTRA_MODEL_FIELDS = (
+#     (
+#         # Dotted path to field.
+#         "mezzanine.blog.models.BlogPost.image",
+#         # Dotted path to field class.
+#         "somelib.fields.ImageField",
+#         # Positional args for field class.
+#         ("Image",),
+#         # Keyword args for field class.
+#         {"blank": True, "upload_to": "blog"},
+#     ),
 #     # Example of adding a field to *all* of Mezzanine's content types:
 #     (
 #         "mezzanine.pages.models.Page.another_field",
@@ -93,8 +82,6 @@ USE_SOUTH = True
 ########################
 # MAIN DJANGO SETTINGS #
 ########################
-
-ALLOWED_HOSTS = ['babymoses.co.za', 'www.babymoses.co.za']
 
 # People who get code error notifications.
 # In the format (('Full Name', 'email@example.com'),
